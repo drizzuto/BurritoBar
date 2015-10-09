@@ -139,6 +139,24 @@ CREATE TABLE IF NOT EXISTS `BurritoBar`.`Sauces` (
   UNIQUE INDEX `sauceID_UNIQUE` (`sauceID` ASC)  COMMENT '')
 ENGINE = InnoDB;
 
+----------- Table 'BurritoBar'.'Session'--------------
+-------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `BurritoBar`.`Session` (
+  `sessionID` VARCHAR(256) NOT NULL COMMENT '',
+  `sessionStart` DATETIME NOT NULL COMMENT '',
+  `lastUse` DATETIME NOT NULL COMMENT '',
+  `userID` INT UNSIGNED NOT NULL COMMENT '',
+  PRIMARY KEY (`sessionID`)  COMMENT '',
+  UNIQUE INDEX `sessionID_UNIQUE` (`sessionID` ASC)  COMMENT '',
+  UNIQUE INDEX `userID_UNIQUE` (`userID` ASC)  COMMENT '',
+  CONSTRAINT `fk_Session_User1`
+    FOREIGN KEY (`userID`)
+    REFERENCES `BurritoBar`.`User` (`userID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
