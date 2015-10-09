@@ -144,7 +144,7 @@ ENGINE = InnoDB;
 -- Table `BurritoBar`.`Session`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `BurritoBar`.`Session` (
-  `sessionID` VARCHAR(256) NOT NULL COMMENT '',
+  `sessionID` VARCHAR(64) NOT NULL COMMENT '',
   `sessionStart` DATETIME NOT NULL COMMENT '',
   `lastUse` DATETIME NOT NULL COMMENT '',
   `userID` INT UNSIGNED NOT NULL COMMENT '',
