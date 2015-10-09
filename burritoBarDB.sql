@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `BurritoBar`.`User` (
   `ccNum` INT NOT NULL COMMENT '',
   `firstName` VARCHAR(20) NOT NULL COMMENT '',
   `lastName` VARCHAR(20) NOT NULL COMMENT '',
+  `loggedIn` TINYINT(1) NOT NULL COMMENT '',
   PRIMARY KEY (`userID`)  COMMENT '',
   UNIQUE INDEX `userID_UNIQUE` (`userID` ASC)  COMMENT '',
   UNIQUE INDEX `email_UNIQUE` (`email` ASC)  COMMENT '',
