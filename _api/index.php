@@ -83,9 +83,9 @@ $app->post('/getMenu',function()
 	if ($statement->execute()) {
 		$result['success'] = true;
 		$result['menu'] = array();
-		while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 		{
-			if(array_key_exists($row['itemType'],$result['menu']))
+			if(!array_key_exists($row['itemType'],$result['menu']))
 			{
 				$result['menu'][$row['itemType']] = array();
 			}
@@ -122,5 +122,11 @@ $app->post('/getMostRecentOrder',function()
 	}
 	echo json_encode($result);
 });
+
+$app->get('/', function()
+{
+	echo "test";
+});
+
 $app->run();
 ?>
