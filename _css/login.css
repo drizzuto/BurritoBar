@@ -1,0 +1,72 @@
+﻿body 
+{
+    background-color: #F21200;
+}
+
+#navBar
+{
+  background-color: #303030;
+  box-shadow: 0 2px 8px 0;
+  height: 18px;
+  margin: 0;
+  padding: 10px;
+}
+
+#navBar *
+{
+    display: inline;
+    text-decoration: none;
+}
+
+#navbar_logo
+{
+    height: 100%;
+}
+
+li.leftNav
+{
+    color: #FAFAFA;
+    font-family: PT-Sans, Arial, sans-serif;
+    padding: 9px;
+    position: relative;
+    bottom: 3px;
+}
+
+li.leftNav:hover
+{
+  background-color: #5b5b5b;
+}
+
+li.leftNav > a
+{
+    color: #FAFAFA;
+}
+
+#login_form
+{
+    background-color: #F7EC20;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px 0;
+    height: 225px;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    width: 350px;
+}
+
+.login-form
+{
+    border-radius: 20px;
+    display: block;
+    height: 12%;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-right: auto;
+    width: 80%;
+}
+
+#submit_button
+{
+    margin-bottom: 1px;
+}

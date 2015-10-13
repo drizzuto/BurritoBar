@@ -1,0 +1,99 @@
+﻿body 
+{
+    background-color: #F21200;
+}
+
+#navBar
+{
+  background-color: #303030;
+  box-shadow: 0 2px 8px 0;
+  height: 18px;
+  margin: 0;
+  padding: 10px;
+}
+
+#navBar *
+{
+    display: inline;
+    text-decoration: none;
+}
+
+#navbar_logo
+{
+    height: 100%;
+}
+
+li.leftNav
+{
+    color: #FAFAFA;
+    font-family: PT-Sans, Arial, sans-serif;
+    padding: 9px;
+    position: relative;
+    bottom: 3px;
+}
+
+li.leftNav:hover
+{
+  background-color: #5b5b5b;
+}
+
+li.leftNav > a
+{
+    color: #FAFAFA;
+}
+
+.loginForm
+{
+  float: right;
+  padding-right: 2px;
+}
+
+#sign_up_link
+{
+    color: #FAFAFA;
+    float: right;
+    margin-left: 4px;
+    margin-right:2px;
+}
+
+#sign_up_form
+{
+    background-color: #F7EC20;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 0;
+    height: 300px;
+    margin-left: auto;
+    margin-top: 200px;
+    margin-right: auto;
+    padding-top: 50px;
+    text-align: center;
+    width: 400px;
+}
+
+/*#sign_up_form input,select
+{
+
+}*/
+
+#sign_up_form > input
+{
+    display: block;
+    height: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+}
+
+.sign-up-field
+{
+    border-radius: 5px;
+    height: 34px;
+    margin-top: 5px;
+    width: 165px;
+}
+
+#credit_card > input
+{
+    width: 203px;
+}
+
