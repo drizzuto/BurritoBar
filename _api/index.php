@@ -15,66 +15,6 @@ catch (PDOException $e) {
     die ($response);
 }
 
-$app->get('/hello/:name', function ($name) {
-    echo "Hello, $name";
-});
-
-$app->post('/validate', function() {
-	global $pdo;
-	$args [":username"] = $_POST["email"];
-	$args [":password"] = $_POST["password"];
-	$statement = $pdo->prepare(
-		"SELECT COUNT(username) AS count FROM Account
-			WHERE username = :email AND password = :password");
-	if ($statement->execute($args)) {
-		$result["success"] = true;
-		$row = $statement->fetch($fetch_style=$pdo::FETCH_ASSOC);
-		$result['valid'] = $row['count'] != 0;
-		$result['error'] = $result['valid'] ? '' : 'The combination is incorrect.';
-	}
-	else {
-		$result["success"] = false;
-		$result["error"] = $statement->errorInfo();
-	}
-	echo json_encode($result);
-});
-
-$app->get('/isNewUser/:email', function($email) {
-	global $pdo;
-	$args [":email"] = $email;
-	$statement = $pdo->prepare(
-		"SELECT COUNT(*) AS count FROM Rating
-			WHERE email = :email");
-	if ($statement->execute($args)) {
-		$result["success"] = true;
-		$row = $statement->fetch($fetch_style=$pdo::FETCH_ASSOC);
-		$result['newUser'] = $row['count'] == 0;
-		#$result['error'] = $result['exists'] ? 'The username is taken' : '';
-	}
-	else {
-		$result["success"] = false;
-		$result["error"] = $statement->errorInfo();
-	}
-	echo json_encode($result);
-});
-
-$app->post('/addUser', function() {
-	global $pdo;
-	$args [":email"] = $_POST['email'];
-	$args [":password"] = $_POST['password'];
-	$statement = $pdo->prepare(
-		"INSERT INTO Account (email, password)
-		VALUES (:email, :password)");
-	if ($statement->execute($args)) {
-		$result['success'] = true;
-	}
-	else {
-		$result['success'] = false;
-		$result['error'] = $statement->errorInfo();
-	}
-	echo json_encode($result);
-});
-
 $app->post('/getMenu',function()
 {
 	global $pdo;
