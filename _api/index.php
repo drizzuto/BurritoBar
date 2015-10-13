@@ -79,7 +79,7 @@ $app->post('/getMenu',function()
 {
 	global $pdo;
 	$statement = $pdo->prepare(
-		"SELECT * FROM Item");
+		"SELECT * FROM Items");
 	if ($statement->execute($args)) {
 		$result['success'] = true;
 		$result['menu'] = array();
@@ -90,6 +90,30 @@ $app->post('/getMenu',function()
 				$result['menu'][$row['itemType']] = array();
 			}
 			$result['menu'][$row['itemType']][] = $row['itemName'];
+		}
+	}
+	else {
+		$result['success'] = false;
+		$result['error'] = $statement->errorInfo();
+	}
+	echo json_encode($result);
+});
+
+$app->post('/getMostRecentOrder',function()
+{
+	global $pdo;
+	$args[":userId"] = $_POST["userId"];
+	$statement = $pdo->prepare(
+		"SELECT * FROM Orders 
+			WHERE customerID = :userId 
+			AND timeOrdered = (SELECT MAX(timeOrdered) 
+				FROM Orders 
+				WHERE customerID = :userId)");
+	if ($statement->execute($args)) {
+		$result['success'] = true;
+		while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+		{
+			$result['order'] = $row['orderJSON'];
 		}
 	}
 	else {
