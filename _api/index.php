@@ -89,7 +89,10 @@ $app->post('/getMenu',function()
 			{
 				$result['menu'][$row['itemType']] = array();
 			}
-			$result['menu'][$row['itemType']][] = $row['itemName'];
+			$item = new stdClass;
+			$item->name = $row['itemName'];
+			$item->price = $row['itemPrice'];
+			$result['menu'][$row['itemType']][] = $item;
 		}
 	}
 	else {
@@ -111,7 +114,7 @@ $app->post('/getMostRecentOrder',function()
 				WHERE customerID = :userId)");
 	if ($statement->execute($args)) {
 		$result['success'] = true;
-		while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 		{
 			$result['order'] = $row['orderJSON'];
 		}
