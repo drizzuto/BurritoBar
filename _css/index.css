@@ -1,6 +1,6 @@
 ﻿body 
 {
-    background-color: #F21200;
+    background-color: #8298db;
 }
 
 #navBar
@@ -46,5 +46,13 @@ li.leftNav > a
 {
   float: right;
   padding-right: 2px;
+}
+
+#sign_up_link
+{
+    color: #FAFAFA;
+    float: right;
+    margin-left: 4px;
+    margin-right:2px;
 }
 
