@@ -15,9 +15,6 @@ catch (PDOException $e) {
     $response .= $e->getMessage();
     die ($response);
 }
-$statement = $pdo->prepare(
-		"INSERT INTO Items (itemName,itemType,itemPrice)
-		VALUES (:name,:type,1.5)");
 foreach ($arr as $val)
 {
 	$args = array();
