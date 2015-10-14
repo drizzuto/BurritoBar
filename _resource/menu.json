@@ -1,0 +1,196 @@
+{
+    "menu": [
+        {
+            "itemType": "tortilla",
+            "itemName": "Flour"
+        },
+        {
+            "itemType": "tortilla",
+            "itemName": "Corn"
+        },
+        {
+            "itemType": "tortilla",
+            "itemName": "Wheat"
+        },
+        {
+            "itemType": "meat",
+            "itemName": "Beef"
+        },
+        {
+            "itemType": "meat",
+            "itemName": "Chicken"
+        },
+        {
+            "itemType": "meat",
+            "itemName": "Pork"
+        },
+        {
+            "itemType": "meat",
+            "itemName": "Fish"
+        },
+        {
+            "itemType": "meat",
+            "itemName": "Bear"
+        },
+        {
+            "itemType": "meat",
+            "itemName": "None"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Lettuce"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Tomatoes"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Onions"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "BellPeppers"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Jalepe&ntilde;os"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "HabeneroPepper"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Refried Beans"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "CharroBeans"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Corn"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "SpanishRice"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Cilantro Rice"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "CheddarCheese"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Mixed Cheese"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "PicodeGallo"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Sour Cream"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "TortillaStrips"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Salsa"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Guacamole"
+        },
+        {
+            "itemType": "toppings",
+            "itemName": "Chile con Queso"
+        },
+        {
+            "itemType": "sauce",
+            "itemName": "TabascoSauce"
+        },
+        {
+            "itemType": "sauce",
+            "itemName": "Sriracha Sauce"
+        },
+        {
+            "itemType": "sauce",
+            "itemName": "HellbearSauce"
+        },
+        {
+            "itemType": "sauce",
+            "itemName": "Liquid Suffering"
+        },
+        {
+            "itemType": "sauce",
+            "itemName": "Chuck's&quot;EternityofUnceasingPainandMisery&quot;Sauce"
+        },
+        {
+            "itemType": "sauce",
+            "itemName": "Satan's Drain Cleaner"
+        },
+        {
+            "itemType": "side",
+            "itemName": "None"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Chips &amp; Queso"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Chips&amp;Salsa"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Chips &amp; Guacamole"
+        },
+        {
+            "itemType": "side",
+            "itemName": "TortillaSoup"
+        },
+        {
+            "itemType": "side",
+            "itemName": "None"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Coca-Cola"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Diet Coke"
+        },
+        {
+            "itemType": "side",
+            "itemName": "CokeZero"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Sprite"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Dr.Pepper"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Diet Dr. Pepper"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Water"
+        },
+        {
+            "itemType": "side",
+            "itemName": "Warm Milk"
+        }
+    ]
+}
