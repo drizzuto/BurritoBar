@@ -1,4 +1,10 @@
-﻿body 
+﻿@font-face
+{
+    font-family: Helvetica-Rounded;
+    src: url(../_fonts/HelveticaRounded-Black.otf);
+}
+
+body 
 {
     background-color: #8298db;
 }
@@ -20,7 +26,8 @@
 
 #navbar_logo
 {
-    height: 100%;
+    color: white;
+    font-family: Helvetica-Rounded;
 }
 
 li.leftNav
@@ -54,5 +61,13 @@ li.leftNav > a
     float: right;
     margin-left: 4px;
     margin-right:2px;
+}
+
+#logo
+{
+    display: block;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: auto;
 }
 
