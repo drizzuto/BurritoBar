@@ -76,8 +76,7 @@ $app->post('/signUp', function()
   $args[":creditProvider"] = $_POST["creditProvider"];
   $args[":ccNum"] = $_POST["ccNum"];
   $statement = $pdo->prepare(
-  "SELECT * FROM Account"
-  )
+  "INSERT INTO Account(firstName, lastName, email, password, creditProvider, ccNum) values (:firstName, :lastName, :email, :password, :creditProvider, :ccNum)");
   if($statement = $pdo->execute($args)){
     $result['success'] = true;
   }
@@ -94,11 +93,11 @@ $app->post('/login', function()
   $args[":email"] = $_POST["email"];
   $args[":password"] = $_POST["password"];
   $statement = $pdo->prepare(
-  "SELECT * FROM Account"
-  )
+  "SELECT * FROM Account where email = :email AND password = :password AND loggedIn = 0");
   if($statement = $pdo->execute($args)){
     $result['success'] = true;
     $result['email'] = $row['email'];
+    $row['loggedIn'] = 1;
   }
   else{
     $result['success'] = false;
