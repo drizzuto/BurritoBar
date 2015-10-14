@@ -75,6 +75,9 @@ $app->post('/signUp', function()
   $args[":password"] = $_POST["password"];
   $args[":creditProvider"] = $_POST["creditProvider"];
   $args[":ccNum"] = $_POST["ccNum"];
+  $statement = $pdo->prepare(
+  "SELECT * FROM Account"
+  )
   if($statement = $pdo->execute($args)){
     $result['success'] = true;
   }
@@ -90,6 +93,9 @@ $app->post('/login', function()
   global $pdo;
   $args[":email"] = $_POST["email"];
   $args[":password"] = $_POST["password"];
+  $statement = $pdo->prepare(
+  "SELECT * FROM Account"
+  )
   if($statement = $pdo->execute($args)){
     $result['success'] = true;
     $result['email'] = $row['email'];
