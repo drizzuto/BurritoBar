@@ -1,7 +1,6 @@
-$(document).ready(function () {
-	event.preventDefault();
+$("#sub").click( function() {
 
-	$.ajax({
-		url: '../_api/'
+	$("#submit_button").click(funtion {
+		var name = $.(".login-form")
 	});
 });
