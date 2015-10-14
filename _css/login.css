@@ -1,6 +1,6 @@
 ﻿body 
 {
-    background-color: #F21200;
+    background-color: #8298db;
 }
 
 #navBar
@@ -44,7 +44,7 @@ li.leftNav > a
 
 #login_form
 {
-    background-color: #F7EC20;
+    background-color: #dbc582;
     border-radius: 20px;
     box-shadow: 0 2px 8px 0;
     height: 225px;
@@ -64,6 +64,14 @@ li.leftNav > a
     margin-top: 5px;
     margin-right: auto;
     width: 80%;
+}
+
+#sign_up_link
+{
+    color: #FAFAFA;
+    float: right;
+    margin-left: 4px;
+    margin-right:2px;
 }
 
 #submit_button
