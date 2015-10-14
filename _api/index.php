@@ -8,7 +8,7 @@ $host = 'localhost';
 $app = new \Slim\Slim();
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
-} 
+}
 catch (PDOException $e) {
     $response = "Failed to connect: ";
     $response .= $e->getMessage();
@@ -47,10 +47,10 @@ $app->post('/getMostRecentOrder',function()
 	global $pdo;
 	$args[":userId"] = $_POST["userId"];
 	$statement = $pdo->prepare(
-		"SELECT * FROM Orders 
-			WHERE customerID = :userId 
-			AND timeOrdered = (SELECT MAX(timeOrdered) 
-				FROM Orders 
+		"SELECT * FROM Orders
+			WHERE customerID = :userId
+			AND timeOrdered = (SELECT MAX(timeOrdered)
+				FROM Orders
 				WHERE customerID = :userId)");
 	if ($statement->execute($args)) {
 		$result['success'] = true;
@@ -65,6 +65,41 @@ $app->post('/getMostRecentOrder',function()
 	}
 	echo json_encode($result);
 });
+
+$app->post('/signUp', function()
+{
+  global $pdo;
+  $args[":firstName"] = $_POST["firstName"];
+  $args[":lastName"] = $_POST["lastName"];
+  $args[":email"] = $_POST["email"];
+  $args[":password"] = $_POST["password"];
+  $args[":creditProvider"] = $_POST["creditProvider"];
+  $args[":ccNum"] = $_POST["ccNum"];
+  if($statement = $pdo->execute($args)){
+    $result['success'] = true;
+  }
+  else{
+    $result['success']= false;
+    $result['error'] = $statement->errorInfo();
+  }
+  echo json_encode($result);
+});
+
+$app->post('/login', function()
+{
+  global $pdo;
+  $args[":email"] = $_POST["email"];
+  $args[":password"] = $_POST["password"];
+  if($statement = $pdo->execute($args)){
+    $result['success'] = true;
+    $result['email'] = $row['email'];
+  }
+  else{
+    $result['success'] = false;
+    $result['error'] = $statement->errorInfo();
+  }
+  echo json_encode($result);
+})
 
 $app->get('/', function()
 {
