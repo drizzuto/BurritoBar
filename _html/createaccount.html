@@ -19,20 +19,21 @@
             </form>
         </div>
     </div>
-    <form id="sign_up_form">
+    <form id="signUp">
         <div>
-            <input class="sign-up-field" type="text" placeholder="First name"/>
-            <input class="sign-up-field" type="text" placeholder="Last name" />
+            <input class="signUpForm" type="text" placeholder="First name"/ id="firstNameSignUp">
+            <input class="signUpForm" type="text" placeholder="Last name" id="lastNameSignUp"/>
         </div>
-        <input class="sign-up-field" type="text" placeholder="Email" />
-        <input class="sign-up-field" type="text" placeholder="Password" />
+        <input class="signUpForm" type="text" placeholder="Email" id="emailSignUp"/>
+        <input class="signUpForm" type="text" placeholder="Password" id="passwordSignUp"/>
         <div id="credit_card">
-            <select>
+            <select id="creditCardTypeSignUp">
                 <option value="visa">Visa</option>
                 <option value="mastercard">MasterCard</option>
                 <option value="american_express">American Express</option>
             </select>
-            <input class="sign-up-field" type="text" placeholder="XXXX XXXX XXXX XXXX"/>
+            <input class="signUpForm" type="text" placeholder="XXXX XXXX XXXX XXXX" id="creditCardNumberSignUp"/>
+            <input class="signUpForm" type="submit" id="submitSignUpForm">
         </div>
     </form>
 </body>

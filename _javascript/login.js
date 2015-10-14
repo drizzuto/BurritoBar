@@ -1,8 +1,7 @@
-$(document).ready(function() 
+$(document).ready(function () 
 {
 	$("#submitButton").click(function() 
 	{
-
 		var emailLogin = $("#emailLogin").val();
 		var passwordLogin = $("#passLogin").val();
 
@@ -25,6 +24,7 @@ $(document).ready(function()
 			{
 				alert(data);
 			});
-
 		}
+
+	});
 });

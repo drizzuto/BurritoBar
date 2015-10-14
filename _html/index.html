@@ -3,6 +3,11 @@
 <head>
     <title>It's for your health.</title>
     <link rel="stylesheet" type="text/css" href="../_css/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="../_javascript/login.js">
+    </script>
 </head>
 <body>
     <div id="navBar">
@@ -14,8 +19,8 @@
             <form method="post" id="login" name="loginForm">
                 <a id="sign_up_link" href="createaccount.html">New User?</a>
                 <input class="loginForm" type="submit" value="Log In" id="submitButton">
-                <input class="loginForm" type="text" name="password" placeholder="Password">
-                <input class="loginForm" type="text" name="email" placeholder="Email">
+                <input class="loginForm" type="text" name="password" placeholder="Password" id = "passLogin">
+                <input class="loginForm" type="text" name="email" placeholder="Email" id="emailLogin">
             </form>
         </div>
     </div>

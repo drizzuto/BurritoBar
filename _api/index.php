@@ -15,6 +15,10 @@ catch (PDOException $e) {
     die ($response);
 }
 
+$app->get('/', function() {
+	echo "text";
+});
+
 $app->post('/getMenu',function()
 {
 	global $pdo;
